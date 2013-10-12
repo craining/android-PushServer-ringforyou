@@ -43,11 +43,10 @@ public class MainActivity extends Activity {
 			request.setDeviceType(3); // device_type => 1: web 2: pc 3:android 4:ios 5:wp
 			request.setTagName("DEBUG");
 			// request.setMessage("Hello Channel");
-			// 若要通知，
-			request.setMessageType(0);
-			String message = "{\"custom_content\":{\"content\":\"value2\",\"title\":\"value1\"},\"description\":\"hello world\",\"title\":\"title\"}";
-			request.setMessage(message);
-			// request.setMessage("{\"title\":\"Notify_title_danbo\",\"description\":\"Notify_description_content\"}");
+			request.setMessageType(1);
+//			String message = "{\"custom_content\":{\"content\":\"value2\",\"title\":\"value1\"},\"description\":\"ringforyou_push_msg\",\"title\":\"ringforyou_push_msg\"}";
+//			request.setMessage(message);
+			 request.setMessage("{\"title\":\"Notify_title_danbo\",\"description\":\"Notify_description_content\"}");
 
 			// 5. 调用pushMessage接口
 			PushTagMessageResponse response = channelClient.pushTagMessage(request);
